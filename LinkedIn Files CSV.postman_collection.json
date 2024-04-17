@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "9b8401a6-99b5-4f40-8447-c91d1cae40f3",
+		"name": "LinkedIn Files CSV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32325409"
+	},
+	"item": [
+		{
+			"name": "upload LinkedInFile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1eefc9f2-d956-4870-92a1-b7e1721e657f"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/linkedinFile/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"linkedinFile",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all LinkedInFiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/linkedInFile/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"linkedInFile",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete all LinkedIinFiles",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
